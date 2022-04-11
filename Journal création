@@ -72,7 +72,19 @@ def full_board_check(board):
         return True
     if board[3] == board[5] == board[7] == mark:
         return True
-    return False
+    return False   
+    
+je definis ensuite la fonction renvoyant a l'utilisateur son tour de jouer ainsi que 
+la place retsante sur le tableau:
+
+def player_choice(board):
+    choice = input("Please select an empty space between 1 and 9 : ")
+    while not space_check(board, int(choice)):
+        choice = input("This space isn't free. Please choose between 1 and 9 : ")
+    return choice
+
+    
+    
     
     
 
